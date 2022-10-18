@@ -47,7 +47,26 @@ c, akiknek a keresztneve 'A' betűvel kezdődik!
 (c,) megoldás:
  SELECT COUNT(id) FROM employees WHERE first_name LIKE 'A%';
 
- 
+ 4. Feladat
+A 'products' táblában határozd meg a 'standard_cost' oszlop
+a, legkisebb értékét,
+b, legnagyobb értékét,
+c, legnagyobb értékét, azon rekordok esetében, ahol a 'list_price' legalább 30,
+d, legnagyobb értékét, azon rekordok esetében, ahol a 'product_code' tartalmazza a 'CO' sztringet
+
+(A,a) megoldás:
+SELECT min(standard_cost) FROM products;
+
+(b,) megoldás:
+SELECT MAX(standard_cost) FROM products;
+
+(c,) megoldás:
+SELECT MAX(standard_cost) FROM products WHERE list_price > 30;
+
+(d,) megoldás:
+SELECT MAX(standard_cost) FROM products WHERE product_code LIKE '%CO%';
+
+
  
  
  
